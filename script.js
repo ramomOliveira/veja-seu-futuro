@@ -35,10 +35,11 @@ function fazerPergunta() {
   const pergunta = "<div>" + inputPergunta.value + "</div>";
   res.innerHTML = pergunta + respostas[numAleatorio()]
   inputPergunta.value = ''
+  res.style.opacity = 1;
 
 
   setTimeout(() => {
     res.style.opacity = 0;
-  }, 3000)
+  }, 5000)
 
 }
