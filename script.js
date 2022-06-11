@@ -22,6 +22,7 @@ const respostas = [
   "Sinais apontam que sim.",
 ]
 
+let timeout = null;
 
 function fazerPergunta() {
 
@@ -29,6 +30,7 @@ function fazerPergunta() {
     alert('Por favor, digite uma pergunta.');
     return;
   }
+  clearTimeout(timeout)
 
   const totalRespostas = respostas.length
   const numAleatorio = () => Math.floor(Math.random() * totalRespostas)
@@ -38,8 +40,9 @@ function fazerPergunta() {
   res.style.opacity = 1;
 
 
-  setTimeout(() => {
+  timeout = setTimeout(() => {
     res.style.opacity = 0;
   }, 5000)
+  
 
 }
